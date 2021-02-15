@@ -23,7 +23,7 @@ class ModulloResponse
     public $asObjects = false;
 
     /**
-     * DorcasResponse constructor.
+     * ModulloResponse constructor.
      *
      * @param string                $response
      * @param int                   $httpStatus

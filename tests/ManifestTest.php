@@ -1,9 +1,9 @@
 <?php
 
-namespace Hostville\Dorcas\Tests;
+namespace Hostville\Modullo\Tests;
 
 
-use Hostville\Dorcas\Manifest;
+use Hostville\Modullo\Manifest;
 use PHPUnit\Framework\TestCase;
 
 class ManifestTest extends TestCase

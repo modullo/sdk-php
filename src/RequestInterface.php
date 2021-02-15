@@ -56,7 +56,7 @@ interface RequestInterface
      * that all required values are set in the request body.
      *
      * @return bool
-     * @throws DorcasException
+     * @throws ModulloException
      */
     public function validate(): bool;
 }

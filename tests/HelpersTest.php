@@ -1,6 +1,6 @@
 <?php
 
-namespace Hostville\Dorcas\Tests;
+namespace Hostville\Modullo\Tests;
 
 
 use GuzzleHttp\Client;
@@ -16,7 +16,7 @@ class HelpersTest extends TestCase
     public function testAppPath()
     {
         $root = dirname(__DIR__);
-        $this->assertContains($root, dorcas_sdk_app_path());
+        $this->assertContains($root, modullo_sdk_app_path());
     }
 
     public function testHttpClient()
