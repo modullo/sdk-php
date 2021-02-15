@@ -2,7 +2,8 @@
 session_start();
 require_once(dirname(__DIR__, 2).'/vendor/autoload.php');
 
-$sdk = new Hostville\Modulo\Sdk(['credentials' => ['id' => 2, 'secret' => 'hFWx5xkPbVKXvLwD17Lbl5MFczORgKZwvawKOzpc']]);
+$sdk = new Hostville\Modullo\Sdk(['credentials' => ['id' => 2, 'secret' =>
+  'hFWx5xkPbVKXvLwD17Lbl5MFczORgKZwvawKOzpc']]);
 if (empty($_SESSION['token'])) {
     $token = login_via_password($sdk, 'user@example.org', 'administrator');
     $_SESSION['token'] = $token;
@@ -18,6 +19,6 @@ try {
                                 ->send('get');
     echo $response->getRawResponse();
 
-} catch (Hostville\Modulo\Exception\ModuloException $e) {
+} catch (Hostville\Modullo\Exception\modulloException $e) {
     dd($e->getMessage(), $e->context);
 }

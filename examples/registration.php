@@ -2,7 +2,7 @@
 
 require_once(dirname(__DIR__).'/vendor/autoload.php');
 
-$sdk = new Hostville\Modulo\Sdk(['credentials' => ['id' => 2, 'secret' => 'hFWx5xkPbVKXvLwD17Lbl5MFczORgKZwvawKOzpc']]);
+$sdk = new Hostville\Modullo\Sdk(['credentials' => ['id' => 2, 'secret' => 'hFWx5xkPbVKXvLwD17Lbl5MFczORgKZwvawKOzpc']]);
 $registrationService = $sdk->createRegistrationService();
 # create the service
 try {

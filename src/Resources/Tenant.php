@@ -1,6 +1,6 @@
 <?php
 
-namespace Hostville\Modulo\Resources;
+namespace Hostville\Modullo\Resources;
 
 
 class Tenant extends AbstractResource

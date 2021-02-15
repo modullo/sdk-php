@@ -1,9 +1,9 @@
 <?php
 
-namespace Hostville\Modulo\Resources;
+namespace Hostville\Modullo\Resources;
 
 
-use Hostville\Modulo\RequestInterface;
+use Hostville\Modullo\RequestInterface;
 
 interface ResourceInterface extends RequestInterface
 {

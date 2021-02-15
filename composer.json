@@ -1,16 +1,13 @@
 {
-  "name": "dorcas/sdk-php-laravel",
-  "homepage": "https://dorcas.io",
-  "description": "Dorcas SDK for PHP (Laravel) - Allows you to utilize the Dorcas API within your Laravel web application",
-  "keywords": ["dorcas","business","sdk","php","developer"],
+  "name": "modullo/sdk-php-laravel",
+  "homepage": "https://modullo.io",
+  "description": "Modullo SDK for PHP (Laravel) - Allows you to utilize the Modullo API within your Laravel web application",
+  "keywords": ["modullo","business","sdk","php","developer"],
   "type": "library",
   "license": "GPL-3.0-or-later",
   "authors": [
     {
-      "name": "Ifeoluwa Olawoye"
-    },
-    {
-      "name": "Emmanuel Okeke"
+      "name": "Aina Ayotomide"
     }
   ],
   "require": {
@@ -25,7 +22,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Hostville\\Dorcas\\": "src/"
+      "Hostville\\Modullo\\": "src/"
     },
     "files": [
       "src/helpers.php"

@@ -1,9 +1,9 @@
 <?php
 
-namespace Hostville\Modulo\Tests;
+namespace Hostville\Modullo\Tests;
 
 
-use Hostville\Modulo\UrlRegistry;
+use Hostville\Modullo\UrlRegistry;
 use PHPUnit\Framework\TestCase;
 
 class UrlRegistryTest extends TestCase

@@ -1,9 +1,9 @@
 <?php
 
-namespace Hostville\Modulo\Resources\Users;
+namespace Hostville\Modullo\Resources\Users;
 
 
-use Hostville\Modulo\Resources\AbstractResource;
+use Hostville\Modullo\Resources\AbstractResource;
 
 class User extends AbstractResource
 {

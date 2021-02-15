@@ -1,9 +1,9 @@
 <?php
 
-namespace Hostville\Modulo\Services\Identity;
+namespace Hostville\Modullo\Services\Identity;
 
 
-use Hostville\Modulo\Services\AbstractService;
+use Hostville\modullo\Services\AbstractService;
 
 class Tenant extends AbstractService
 {

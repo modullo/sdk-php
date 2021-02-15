@@ -1,12 +1,12 @@
 <?php
 
-namespace Hostville\Modulo\Resources;
+namespace Hostville\Modullo\Resources;
 
 
-use Hostville\Modulo\ModuloResponse;
-use Hostville\Modulo\RequestInterface;
-use Hostville\Modulo\Sdk;
-use Hostville\Modulo\SendsHttpRequestTrait;
+use Hostville\Modullo\ModulloResponse;
+use Hostville\Modullo\RequestInterface;
+use Hostville\Modullo\Sdk;
+use Hostville\Modullo\SendsHttpRequestTrait;
 use GuzzleHttp\Psr7\Uri;
 use Illuminate\Support\Arr;
 
@@ -237,10 +237,10 @@ abstract class AbstractResource implements ResourceInterface
      * @param string $method
      * @param array  $path
      *
-     * @return \Hostville\Modulo\ModuloResponse
+     * @return \Hostville\Modullo\ModulloResponse
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function send(string $method, array $path = []): ModuloResponse
+    public function send(string $method, array $path = []): ModulloResponse
     {
         return $this->httpSend($method, $this->sdk->getHttpClient(), $path);
     }

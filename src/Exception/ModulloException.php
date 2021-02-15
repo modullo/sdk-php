@@ -1,9 +1,9 @@
 <?php
 
-namespace Hostville\Modulo\Exception;
+namespace Hostville\Modullo\Exception;
 
 
-class ModuloException extends \RuntimeException
+class ModulloException extends \RuntimeException
 {
     /** @var array  */
     public $context;

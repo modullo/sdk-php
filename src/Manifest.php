@@ -1,6 +1,6 @@
 <?php
 
-namespace Hostville\Modulo;
+namespace Hostville\Modullo;
 
 
 class Manifest

@@ -1,9 +1,9 @@
 <?php
 
-namespace Hostville\Modulo\Services;
+namespace Hostville\Modullo\Services;
 
 
-use Hostville\Modulo\RequestInterface;
+use Hostville\Modullo\RequestInterface;
 
 interface ServiceInterface extends RequestInterface
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Hostville\Modulo;
+namespace Hostville\Modullo;
 
 
 use Psr\Http\Message\RequestInterface;
 
-class ModuloResponse
+class ModulloResponse
 {
     /** @var string */
     private $rawResponse;

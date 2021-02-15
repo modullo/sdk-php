@@ -1,12 +1,12 @@
 <?php
 
-namespace Hostville\Modulo\Tests;
+namespace Hostville\Modullo\Tests;
 
 use GuzzleHttp\Client;
-use Hostville\Modulo\Exception\ModuloException;
-use Hostville\Modulo\Manifest;
-use Hostville\Modulo\Sdk;
-use Hostville\Modulo\UrlRegistry;
+use Hostville\Modullo\Exception\ModulloException;
+use Hostville\Modullo\Manifest;
+use Hostville\Modullo\Sdk;
+use Hostville\Modullo\UrlRegistry;
 use PHPUnit\Framework\TestCase;
 
 class SdkTest extends TestCase
@@ -21,7 +21,7 @@ class SdkTest extends TestCase
 
     public function testCheckCredentialsFails()
     {
-        $this->expectException(ModuloException::class);
+        $this->expectException(ModulloException::class);
         $sdk = new Sdk();
     }
 
@@ -81,33 +81,33 @@ class SdkTest extends TestCase
     public function resourceProvider()
     {
         return [
-            ['Advert', \Hostville\Modulo\Resources\ECommerce\Advert::class],
-            ['AppStore', \Hostville\Modulo\Resources\Developers\AppStore::class],
-            ['Blog', \Hostville\Modulo\Resources\ECommerce\Blog::class],
-            ['Company', \Hostville\Modulo\Resources\Company::class],
-            ['Coupon', \Hostville\Modulo\Resources\Coupon::class],
-            ['Country', \Hostville\Modulo\Resources\Common\Country::class],
-            ['ContactField', \Hostville\Modulo\Resources\Crm\ContactField::class],
-            ['Customer', \Hostville\Modulo\Resources\Crm\Customer::class],
-            ['Deal', \Hostville\Modulo\Resources\Crm\Deal::class],
-            ['Department', \Hostville\Modulo\Resources\Common\Company\Department::class],
-            ['Developer', \Hostville\Modulo\Resources\Developers\Developer::class],
-            ['DeveloperApplication', \Hostville\Modulo\Resources\Developers\Application::class],
-            ['Directory', \Hostville\Modulo\Resources\Common\Directory::class],
-            ['Domain', \Hostville\Modulo\Resources\ECommerce\Domain::class],
-            ['Employee', \Hostville\Modulo\Resources\Common\Company\Employee::class],
-            ['Finance', \Hostville\Modulo\Resources\Finance\Finance::class],
-            ['Integration', \Hostville\Modulo\Resources\Common\Company\Integration::class],
-            ['Invite', \Hostville\Modulo\Resources\Invite::class],
-            ['Location', \Hostville\Modulo\Resources\Common\Company\Location::class],
-            ['Order', \Hostville\Modulo\Resources\Invoicing\Order::class],
-            ['Partner', \Hostville\Modulo\Resources\Partner::class],
-            ['Plan', \Hostville\Modulo\Resources\Plan::class],
-            ['Product', \Hostville\Modulo\Resources\Invoicing\Product::class],
-            ['ProductCategory', \Hostville\Modulo\Resources\Invoicing\ProductCategory::class],
-            ['State', \Hostville\Modulo\Resources\Common\State::class],
-            ['Team', \Hostville\Modulo\Resources\Common\Company\Team::class],
-            ['User', \Hostville\Modulo\Resources\Users\User::class]
+            ['Advert', \Hostville\Modullo\Resources\ECommerce\Advert::class],
+            ['AppStore', \Hostville\Modullo\Resources\Developers\AppStore::class],
+            ['Blog', \Hostville\Modullo\Resources\ECommerce\Blog::class],
+            ['Company', \Hostville\Modullo\Resources\Company::class],
+            ['Coupon', \Hostville\Modullo\Resources\Coupon::class],
+            ['Country', \Hostville\Modullo\Resources\Common\Country::class],
+            ['ContactField', \Hostville\Modullo\Resources\Crm\ContactField::class],
+            ['Customer', \Hostville\Modullo\Resources\Crm\Customer::class],
+            ['Deal', \Hostville\Modullo\Resources\Crm\Deal::class],
+            ['Department', \Hostville\Modullo\Resources\Common\Company\Department::class],
+            ['Developer', \Hostville\Modullo\Resources\Developers\Developer::class],
+            ['DeveloperApplication', \Hostville\Modullo\Resources\Developers\Application::class],
+            ['Directory', \Hostville\Modullo\Resources\Common\Directory::class],
+            ['Domain', \Hostville\Modullo\Resources\ECommerce\Domain::class],
+            ['Employee', \Hostville\Modullo\Resources\Common\Company\Employee::class],
+            ['Finance', \Hostville\Modullo\Resources\Finance\Finance::class],
+            ['Integration', \Hostville\Modullo\Resources\Common\Company\Integration::class],
+            ['Invite', \Hostville\Modullo\Resources\Invite::class],
+            ['Location', \Hostville\Modullo\Resources\Common\Company\Location::class],
+            ['Order', \Hostville\Modullo\Resources\Invoicing\Order::class],
+            ['Partner', \Hostville\Modullo\Resources\Partner::class],
+            ['Plan', \Hostville\Modullo\Resources\Plan::class],
+            ['Product', \Hostville\Modullo\Resources\Invoicing\Product::class],
+            ['ProductCategory', \Hostville\Modullo\Resources\Invoicing\ProductCategory::class],
+            ['State', \Hostville\Modullo\Resources\Common\State::class],
+            ['Team', \Hostville\Modullo\Resources\Common\Company\Team::class],
+            ['User', \Hostville\Modullo\Resources\Users\User::class]
         ];
     }
 
@@ -124,11 +124,11 @@ class SdkTest extends TestCase
     public function serviceProvider()
     {
         return [
-            ['Authorization', \Hostville\Modulo\Services\Identity\Authorization::class],
-            ['Company', \Hostville\Modulo\Services\Identity\Tenant::class],
-            ['Metrics', \Hostville\Modulo\Services\Metrics::class],
-            ['PasswordLogin', \Hostville\Modulo\Services\Identity\PasswordLogin::class],
-            ['Profile', \Hostville\Modulo\Services\Identity\Profile::class],
+            ['Authorization', \Hostville\Modullo\Services\Identity\Authorization::class],
+            ['Company', \Hostville\Modullo\Services\Identity\Tenant::class],
+            ['Metrics', \Hostville\Modullo\Services\Metrics::class],
+            ['PasswordLogin', \Hostville\Modullo\Services\Identity\PasswordLogin::class],
+            ['Profile', \Hostville\Modullo\Services\Identity\Profile::class],
             ['Registration', \Hostville\Modulo\Services\Identity\Registration::class],
             ['Store', \Hostville\Modulo\Services\Store::class]
         ];

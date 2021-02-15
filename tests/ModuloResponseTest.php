@@ -1,14 +1,14 @@
 <?php
 
-namespace Hostville\Modulo\Tests;
+namespace Hostville\Modullo\Tests;
 
 
-use Hostville\Modulo\ModuloResponse;
+use Hostville\Modullo\ModulloResponse;
 use PHPUnit\Framework\TestCase;
 
-class ModuloResponseTest extends TestCase
+class ModulloResponseTest extends TestCase
 {
-    /** @var ModuloResponse */
+    /** @var ModulloResponse */
     protected $response;
 
     protected $sampleSuccess = [
@@ -22,7 +22,7 @@ class ModuloResponseTest extends TestCase
 
     public function setUp()
     {
-        $this->response = new ModuloResponse(json_encode($this->sampleSuccess));
+        $this->response = new ModulloResponse(json_encode($this->sampleSuccess));
     }
 
     public function testGetRawResponse()
@@ -33,7 +33,7 @@ class ModuloResponseTest extends TestCase
     public function testIsSuccessful()
     {
         $this->assertTrue($this->response->isSuccessful());
-        $response = new ModuloResponse('', 400);
+        $response = new ModulloResponse('', 400);
         $this->assertFalse($response->isSuccessful());
     }
 

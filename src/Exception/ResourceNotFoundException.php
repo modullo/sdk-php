@@ -1,9 +1,9 @@
 <?php
 
-namespace Hostville\Modulo\Exception;
+namespace Hostville\Modullo\Exception;
 
 
-class ResourceNotFoundException extends ModuloException
+class ResourceNotFoundException extends ModulloException
 {
 
 }

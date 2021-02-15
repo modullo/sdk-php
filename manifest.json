@@ -3,13 +3,13 @@
 
     "Tenant": {
       "client": "Tenant",
-      "namespace": "Hostville\\Modulo\\Resources",
+      "namespace": "Hostville\\Modullo\\Resources",
       "path": "tenants",
       "headers": ["Authorization"]
     },
     "User": {
       "client": "User",
-      "namespace": "Hostville\\Modulo\\Resources\\Users",
+      "namespace": "Hostville\\Modullo\\Resources\\Users",
       "path": "users",
       "includes": ["company"],
       "headers": ["Authorization"]
@@ -20,7 +20,7 @@
   "services": {
     "Authorization": {
       "client": "Authorization",
-      "namespace": "Hostville\\Modulo\\Services\\Identity",
+      "namespace": "Hostville\\Modullo\\Services\\Identity",
       "path": "auth",
       "parameters": {
         "required": ["client_id", "client_secret", "email"],
@@ -29,7 +29,7 @@
     },
     "Tenant": {
       "client": "Tenant",
-      "namespace": "Hostville\\Modulo\\Services\\Identity",
+      "namespace": "Hostville\\Modullo\\Services\\Identity",
       "path": "tenant",
       "parameters": {
         "required": [],
@@ -38,7 +38,7 @@
     },
     "PasswordLogin": {
       "client": "PasswordLogin",
-      "namespace": "Hostville\\Modulo\\Services\\Identity",
+      "namespace": "Hostville\\Modullo\\Services\\Identity",
       "path": "oauth/token",
       "parameters": {
         "required": ["client_id", "client_secret", "grant_type", "username", "password", "scope"],
@@ -47,7 +47,7 @@
     },
     "Profile": {
       "client": "Profile",
-      "namespace": "Hostville\\Modulo\\Services\\Identity",
+      "namespace": "Hostville\\Modullo\\Services\\Identity",
       "path": "me",
       "parameters": {
         "required": [],
@@ -56,7 +56,7 @@
     },
     "Registration": {
       "client": "Registration",
-      "namespace": "Hostville\\Modulo\\Services\\Identity",
+      "namespace": "Hostville\\Modullo\\Services\\Identity",
       "path": "register",
       "parameters": {
       "required": ["client_id", "client_secret", "email", "password", "firstname", "lastname", "phone", "tenant"],

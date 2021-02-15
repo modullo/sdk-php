@@ -1,9 +1,9 @@
 <?php
 
-namespace Hostville\Modulo;
+namespace Hostville\Modullo;
 
 
-use Hostville\Modulo\Exception\ModuloException;
+use Hostville\Modullo\Exception\ModulloException;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\BadResponseException;
 use GuzzleHttp\Exception\ConnectException;
@@ -142,7 +142,7 @@ trait SendsHttpRequestTrait
      */
     public function validate(): bool
     {
-        throw new ModuloException('You should override this method.');
+        throw new ModulloException('You should override this method.');
     }
 
     /**
@@ -152,10 +152,10 @@ trait SendsHttpRequestTrait
      * @param Client $httpClient
      * @param array  $path additional components for the path; e.g.: [$id, 'prices']
      *
-     * @return ModuloResponse
+     * @return ModulloResponse
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function send(string $method, Client $httpClient, array $path = []): ModuloResponse
+    public function send(string $method, Client $httpClient, array $path = []): ModulloResponse
     {
         $this->prefillHeader();
         $this->prefillBody();
@@ -196,14 +196,14 @@ trait SendsHttpRequestTrait
                 }
             }
             $response = $httpClient->request($method, $url, $options);
-            return new ModuloResponse((string) $response->getBody());
+            return new ModulloResponse((string) $response->getBody());
 
         } catch (BadResponseException $e) {
             // in the case of a failure, let's know the status
-            return new ModuloResponse((string) $e->getResponse()->getBody(), $e->getResponse()->getStatusCode(), $e->getRequest());
+            return new ModulloResponse((string) $e->getResponse()->getBody(), $e->getResponse()->getStatusCode(), $e->getRequest());
 
         } catch (ConnectException $e) {
-            return new ModuloResponse('{"status": "error", "data": "'.$e->getMessage().'"}', 0);
+            return new ModulloResponse('{"status": "error", "data": "'.$e->getMessage().'"}', 0);
         }
     }
 }

@@ -1,25 +1,25 @@
 <?php /** @noinspection ALL */
 
-namespace Hostville\Modulo;
+namespace Hostville\Modullo;
 
 
-use Hostville\Modulo\Exception\ModuloException;
-use Hostville\Modulo\Exception\ResourceNotFoundException;
-use Hostville\Modulo\Resources\ResourceInterface;
-use Hostville\Modulo\Services\ServiceInterface;
+use Hostville\modullo\Exception\modulloException;
+use Hostville\modullo\Exception\ResourceNotFoundException;
+use Hostville\modullo\Resources\ResourceInterface;
+use Hostville\modullo\Services\ServiceInterface;
 use GuzzleHttp\Client;
 
 /**
- * The main SDK class for accessing the resources, and services on the Modulo API.
+ * The main SDK class for accessing the resources, and services on the modullo API.
  * It provides some methods that allow you to easily create, and use resources and services.
  *
  *
- * @method \Hostville\Modulo\Resources\Tenant                      createTenantResource(string $id = null)
- * @method \Hostville\Modulo\Resources\Users\User                   createUserResource(string $id = null)
- * @method \Hostville\Modulo\Services\Identity\Authorization        createAuthorizationService()
- * @method \Hostville\Modulo\Services\Identity\PasswordLogin        createPasswordLoginService()
-* @method \Hostville\Modulo\Services\Identity\Profile               createProfileService()
- * @method \Hostville\Modulo\Services\Identity\Registration         createRegistrationService()
+ * @method \Hostville\modullo\Resources\Tenant                      createTenantResource(string $id = null)
+ * @method \Hostville\modullo\Resources\Users\User                   createUserResource(string $id = null)
+ * @method \Hostville\modullo\Services\Identity\Authorization        createAuthorizationService()
+ * @method \Hostville\modullo\Services\Identity\PasswordLogin        createPasswordLoginService()
+* @method \Hostville\modullo\Services\Identity\Profile               createProfileService()
+ * @method \Hostville\modullo\Services\Identity\Registration         createRegistrationService()
  *
  */
 class Sdk
@@ -154,20 +154,20 @@ class Sdk
      * @param array $args
      *
      * @return bool
-     * @throws ModuloException
+     * @throws modulloException
      */
     private function checkCredentials(array $args = []): bool
     {
         if (empty($args['credentials'])) {
-            throw new ModuloException('You did not provide the Modulo client credentials in the configuration.', $args);
+            throw new modulloException('You did not provide the modullo client credentials in the configuration.', $args);
         }
         $id = data_get($args, 'credentials.id', null);
         $secret = data_get($args, 'credentials.secret', null);
         if (empty($id)) {
-            throw new ModuloException('The client "id" key is absent in the credentials configuration.', $args);
+            throw new modulloException('The client "id" key is absent in the credentials configuration.', $args);
         }
         if (empty($secret)) {
-            throw new ModuloException('The client "secret" key is absent in the credentials configuration.', $args);
+            throw new modulloException('The client "secret" key is absent in the credentials configuration.', $args);
         }
         return true;
     }

@@ -1,6 +1,6 @@
 <?php
 
-use Hostville\Modulo\ModuloResponse;
+use Hostville\Modullo\ModulloResponse;
 
 /**
  * Checks if this library was installed via composer.
@@ -60,7 +60,7 @@ function http_client(\GuzzleHttp\Psr7\Uri $uri = null): \GuzzleHttp\Client
         \GuzzleHttp\RequestOptions::CONNECT_TIMEOUT => 30.0,
         \GuzzleHttp\RequestOptions::TIMEOUT => 30.0,
         \GuzzleHttp\RequestOptions::HEADERS => [
-            'User-Agent' => 'dorcas-sdk-php/'.Hostville\Modulo\Sdk::VERSION
+            'User-Agent' => 'modullo-sdk-php/'.Hostville\Modullo\Sdk::VERSION
         ]
     ];
     if (!empty($baseUrl)) {
@@ -100,17 +100,17 @@ function parse_query_parameters(string $queryString): array
 
 /**
  * Performs a login for using the provided details; if successful, it returns the "access_token"
- * (or ModuloResponse - depending on the value of the $returnToken parameter), else it will
+ * (or ModulloResponse - depending on the value of the $returnToken parameter), else it will
  * return the actual response object.
  *
- * @param \Hostville\Modulo\Sdk $sdk
+ * @param \Hostville\Modullo\Sdk $sdk
  * @param array                 $credentials
  * @param bool                  $returnToken
  *
- * @return ModuloResponse
+ * @return ModulloResponse
  * @throws \GuzzleHttp\Exception\GuzzleException
  */
-function authorize_via_email_only(Hostville\Modulo\Sdk $sdk, array $credentials, bool $returnToken = true)
+function authorize_via_email_only(Hostville\Modullo\Sdk $sdk, array $credentials, bool $returnToken = true)
 {
     $service = $sdk->createAuthorizationService();
     foreach ($credentials as $key => $value) {
@@ -123,22 +123,22 @@ function authorize_via_email_only(Hostville\Modulo\Sdk $sdk, array $credentials,
 
 /**
  * Performs a login for using the provided details; if successful, it returns the "access_token"
- * (or ModuloResponse - depending on the value of the $returnToken parameter), else it will
+ * (or ModulloResponse - depending on the value of the $returnToken parameter), else it will
  * return the actual response object.
  *
  * NOTE: The client_id, and client_secret must correspond to a Password Grant Client issued to you.
  *
  *
- * @param Hostville\Modulo\Sdk $sdk
+ * @param Hostville\Modullo\Sdk $sdk
  * @param string               $username
  * @param string               $password
  * @param bool                 $returnToken
  *
- * @return Hostville\Modulo\ModuloResponse|string
- * @throws Hostville\Modulo\Exception\ModuloException
+ * @return Hostville\Modullo\ModulloResponse|string
+ * @throws Hostville\Modullo\Exception\ModulloException
  * @throws \GuzzleHttp\Exception\GuzzleException
  */
-function login_via_password(Hostville\Modulo\Sdk $sdk, string $username, string $password, bool $returnToken = true)
+function login_via_password(Hostville\Modullo\Sdk $sdk, string $username, string $password, bool $returnToken = true)
 {
     $service = $sdk->createPasswordLoginService();
     $response = $service->addBodyParam('username', $username)
@@ -149,9 +149,9 @@ function login_via_password(Hostville\Modulo\Sdk $sdk, string $username, string 
 }
 
 /**
- * Creates a new Modulo account with the provided details in the config array.
+ * Creates a new Modullo account with the provided details in the config array.
  *
- * @param \Hostville\Modulo\Sdk $sdk
+ * @param \Hostville\Modullo\Sdk $sdk
  * @param array                 $config array containing the following keys:
  *                                      - email: the account email address
  *                                      - password: the desired plaintext account password
@@ -160,10 +160,10 @@ function login_via_password(Hostville\Modulo\Sdk $sdk, string $username, string 
  *                                      - phone: account holder's contact phone number
  *                                      - company: account holder's company name
  *
- * @return ModuloResponse
+ * @return ModulloResponse
  * @throws \GuzzleHttp\Exception\GuzzleException
  */
-function create_account(\Hostville\Modulo\Sdk $sdk, array $config): ModuloResponse
+function create_account(\Hostville\Modullo\Sdk $sdk, array $config): ModulloResponse
 {
     $service = $sdk->createRegistrationService();
     foreach ($config as $key => $value) {
@@ -175,11 +175,11 @@ function create_account(\Hostville\Modulo\Sdk $sdk, array $config): ModuloRespon
 /**
  * Returns the validation errors from the response, if any.
  *
- * @param ModuloResponse $response
+ * @param ModulloResponse $response
  *
  * @return array
  */
-function get_validation_errors_from_response(ModuloResponse $response): array
+function get_validation_errors_from_response(ModulloResponse $response): array
 {
     if (empty($response->getErrors())) {
         return [];

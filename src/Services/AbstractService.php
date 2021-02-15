@@ -1,12 +1,12 @@
 <?php
 
-namespace Hostville\Modulo\Services;
+namespace Hostville\Modullo\Services;
 
 
-use Hostville\Modulo\Exception\ModuloException;
-use Hostville\Modulo\RequestInterface;
-use Hostville\Modulo\Sdk;
-use Hostville\Modulo\SendsHttpRequestTrait;
+use Hostville\Modullo\Exception\ModulloException;
+use Hostville\Modullo\RequestInterface;
+use Hostville\Modullo\Sdk;
+use Hostville\Modullo\SendsHttpRequestTrait;
 use GuzzleHttp\Psr7\Uri;
 
 abstract class AbstractService implements ServiceInterface
@@ -128,7 +128,7 @@ abstract class AbstractService implements ServiceInterface
             }
         }
         if (!empty($missing['header']) || !empty($missing['body'])) {
-            throw new ModuloException('Some required parameters are missing in the request.', $missing);
+            throw new ModulloException('Some required parameters are missing in the request.', $missing);
         }
         return true;
     }
@@ -137,7 +137,7 @@ abstract class AbstractService implements ServiceInterface
      * @param string $method
      * @param array  $path
      *
-     * @return \Hostville\Modulo\ModuloResponse
+     * @return \Hostville\Modullo\ModulloResponse
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function send(string $method, array $path = [])

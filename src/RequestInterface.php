@@ -1,9 +1,9 @@
 <?php
 
-namespace Hostville\Modulo;
+namespace Hostville\Modullo;
 
 
-use Hostville\Modulo\Exception\ModuloException;
+use Hostville\Modullo\Exception\ModulloException;
 use GuzzleHttp\Psr7\Uri;
 
 interface RequestInterface
