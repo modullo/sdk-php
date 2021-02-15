@@ -1,0 +1,34 @@
+{
+  "name": "dorcas/sdk-php-laravel",
+  "homepage": "https://dorcas.io",
+  "description": "Dorcas SDK for PHP (Laravel) - Allows you to utilize the Dorcas API within your Laravel web application",
+  "keywords": ["dorcas","business","sdk","php","developer"],
+  "type": "library",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Ifeoluwa Olawoye"
+    },
+    {
+      "name": "Emmanuel Okeke"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "^6.3",
+    "illuminate/support": "^6.0.0",
+    "moneyphp/money": "^3.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Hostville\\Dorcas\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  }
+}
