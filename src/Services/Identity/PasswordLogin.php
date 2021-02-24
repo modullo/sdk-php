@@ -3,7 +3,7 @@
 namespace Hostville\Modullo\Services\Identity;
 
 
-use Hostville\modullo\Services\AbstractService;
+use Hostville\Modullo\Services\AbstractService;
 
 class PasswordLogin extends AbstractService
 {

@@ -25,12 +25,12 @@ class UrlRegistry
      */
     public function __construct(string $env = 'staging')
     {
-        $enviroments = config('enviroments');
-        $envs = array_keys($enviroments);
-        # get the available environment
-        $this->environment = !in_array(strtolower($env), $envs, true) ? 'staging' : strtolower($env);
-        $base = $enviroments[$this->environment];
-        $this->uri = new Uri($base);
+//        $enviroments = config('modullo-api.enviroments');
+//        $envs = array_keys($enviroments);
+//        # get the available environment
+//        $this->environment = !in_array(strtolower($env), $envs, true) ? 'staging' : strtolower($env);
+//        $base = $enviroments[$this->environment];
+          $this->uri = new Uri('https://api.modullo.test');
     }
 
     /**
@@ -84,25 +84,38 @@ class UrlRegistry
         return empty($query) ? '' : http_build_query($query);
     }
 
-    /**
-     * Performs the path, and query parameter processing before returning the final path.
-     *
-     * @param string $path      the base path
-     * @param array  $params    contains additional data to be used in composing the path and/or query of the URL
-     *
-     * @return Uri
-     */
+  /**
+   * Performs the path, and query parameter processing before returning the final path.
+   *
+   * @param string|null $path the base path
+   * @param array $params contains additional data to be used in composing the path and/or query of the URL
+   *
+   * @return Uri
+   */
     public function getUrl(string $path = null, array $params = []): Uri
     {
-        $pathParams = $this->getPathParams($params);
+       $pathParams = $this->getPathParams($params);
+
+
+
         # get the path parameters
-        $queryParams = $this->getQueryParams($params);
+       $queryParams = $this->getQueryParams($params);
         # get the query parameters
-        $path .= !empty($pathParams) ? '/' . $pathParams : '';
+
+       $path .= !empty($pathParams) ? '/' . $pathParams : '';
+
+       $path = $this->getVersion().'/'. $path;
+
         # append the rest of the path
         if (!empty($path) && $path[0] !== '/') {
             $path = '/' . $path;
         }
         return $this->uri->withPath($path)->withQuery($queryParams);
     }
+
+
+      public function getVersion(): string
+      {
+        return 'v1';
+      }
 } 

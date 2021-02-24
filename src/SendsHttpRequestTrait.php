@@ -164,7 +164,7 @@ trait SendsHttpRequestTrait
             $this->validate();
         }
         $uri = static::getRequestUrl($path);
-        $url = $uri->getScheme() . '://' . $uri->getAuthority() . $uri->getPath();
+        $url = $uri->getScheme() . '://' . $uri->getAuthority() .  $uri->getPath();
         # set the URL
         try {
             $options = [];
@@ -186,10 +186,9 @@ trait SendsHttpRequestTrait
                     }
                     $options[RequestOptions::MULTIPART] = $this->multipart;
 
-                } elseif (static::isJsonRequest() && !empty($this->body)) {
+                } elseif ($this->isJsonRequest() && !empty($this->body)) {
                     # a JSON request
                     $options[RequestOptions::JSON] = $this->body;
-
                 } elseif (!empty($this->body)) {
                     # we switch to an application/www-form-urlencoded type
                     $options[RequestOptions::FORM_PARAMS] = $this->body;

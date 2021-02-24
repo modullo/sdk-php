@@ -39,7 +39,7 @@
     "PasswordLogin": {
       "client": "PasswordLogin",
       "namespace": "Hostville\\Modullo\\Services\\Identity",
-      "path": "oauth/token",
+      "path": "auth/token",
       "parameters": {
         "required": ["client_id", "client_secret", "grant_type", "username", "password", "scope"],
         "optional": []
@@ -48,7 +48,7 @@
     "Profile": {
       "client": "Profile",
       "namespace": "Hostville\\Modullo\\Services\\Identity",
-      "path": "me",
+      "path": "auth/me",
       "parameters": {
         "required": [],
         "optional": []

@@ -3,10 +3,10 @@
 namespace Hostville\Modullo;
 
 
-use Hostville\modullo\Exception\modulloException;
-use Hostville\modullo\Exception\ResourceNotFoundException;
-use Hostville\modullo\Resources\ResourceInterface;
-use Hostville\modullo\Services\ServiceInterface;
+use Hostville\Modullo\Exception\modulloException;
+use Hostville\Modullo\Exception\ResourceNotFoundException;
+use Hostville\Modullo\Resources\ResourceInterface;
+use Hostville\Modullo\Services\ServiceInterface;
 use GuzzleHttp\Client;
 
 /**
