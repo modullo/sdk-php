@@ -57,9 +57,9 @@
     "Registration": {
       "client": "Registration",
       "namespace": "Hostville\\Modullo\\Services\\Identity",
-      "path": "register",
+      "path": "auth/register",
       "parameters": {
-      "required": ["client_id", "client_secret", "email", "password", "firstname", "lastname", "phone", "tenant"],
+      "required": ["client_id", "client_secret", "email", "password", "first_name", "last_name", "phone_number"],
         "optional": []
       }
     }

@@ -14,11 +14,11 @@ use GuzzleHttp\Client;
  * It provides some methods that allow you to easily create, and use resources and services.
  *
  *
- * @method \Hostville\modullo\Resources\Tenant                      createTenantResource(string $id = null)
+ * @method \Hostville\modullo\Resources\Tenant                       createTenantResource(string $id = null)
  * @method \Hostville\modullo\Resources\Users\User                   createUserResource(string $id = null)
  * @method \Hostville\modullo\Services\Identity\Authorization        createAuthorizationService()
  * @method \Hostville\modullo\Services\Identity\PasswordLogin        createPasswordLoginService()
-* @method \Hostville\modullo\Services\Identity\Profile               createProfileService()
+ * @method \Hostville\modullo\Services\Identity\Profile               createProfileService()
  * @method \Hostville\modullo\Services\Identity\Registration         createRegistrationService()
  *
  */
@@ -64,12 +64,12 @@ class Sdk
      */
     public function __construct(array $args = [])
     {
-        if (empty($args['environment'])) {
+        if (empty($args['credentials']['environment'])) {
             $args['environment'] = 'staging';
         }
         $this->checkCredentials($args);
         $this->args = $args;
-        $this->urlRegistry = new UrlRegistry($args['environment']);
+        $this->urlRegistry = new UrlRegistry($args['credentials']['environment']);
         $this->httpClient = http_client();
         $this->manifest = new Manifest();
         $this->token = data_get($args, 'credentials.token', null);

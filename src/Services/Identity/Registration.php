@@ -10,7 +10,7 @@ class Registration extends AbstractService
     /**
      * @return $this
      */
-    protected function prefillBody()
+    protected function prefillBody(): self
     {
         $this->body['client_id'] = $this->sdk->getClientId();
         $this->body['client_secret'] = $this->sdk->getClientSecret();
@@ -22,7 +22,7 @@ class Registration extends AbstractService
      *
      * @return string
      */
-    function getName(): string
+    public function getName(): string
     {
         return 'Registration';
     }
