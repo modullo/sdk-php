@@ -1,0 +1,67 @@
+{
+  "resources": {
+
+    "Tenant": {
+      "client": "Tenant",
+      "namespace": "Hostville\\Modullo\\Resources",
+      "path": "tenants",
+      "headers": ["Authorization"]
+    },
+    "User": {
+      "client": "User",
+      "namespace": "Hostville\\Modullo\\Resources\\Users",
+      "path": "users",
+      "includes": ["company"],
+      "headers": ["Authorization"]
+    }
+  },
+ 
+
+  "services": {
+    "Authorization": {
+      "client": "Authorization",
+      "namespace": "Hostville\\Modullo\\Services\\Identity",
+      "path": "auth",
+      "parameters": {
+        "required": ["client_id", "client_secret", "email"],
+        "optional": []
+      }
+    },
+    "Tenant": {
+      "client": "Tenant",
+      "namespace": "Hostville\\Modullo\\Services\\Identity",
+      "path": "tenant",
+      "parameters": {
+        "required": [],
+        "optional": []
+      }
+    },
+    "PasswordLogin": {
+      "client": "PasswordLogin",
+      "namespace": "Hostville\\Modullo\\Services\\Identity",
+      "path": "auth/token",
+      "parameters": {
+        "required": ["client_id", "client_secret", "grant_type", "username", "password", "scope"],
+        "optional": []
+      }
+    },
+    "Profile": {
+      "client": "Profile",
+      "namespace": "Hostville\\Modullo\\Services\\Identity",
+      "path": "auth/me",
+      "parameters": {
+        "required": [],
+        "optional": []
+      }
+    },
+    "Registration": {
+      "client": "Registration",
+      "namespace": "Hostville\\Modullo\\Services\\Identity",
+      "path": "auth/register",
+      "parameters": {
+      "required": ["client_id", "client_secret", "email", "password", "first_name", "last_name", "phone_number"],
+        "optional": []
+      }
+    }
+  }
+}
