@@ -1,17 +1,21 @@
 {
   "resources": {
-
-    "Tenant": {
+    "Tenants": {
       "client": "Tenant",
-      "namespace": "Hostville\\Modullo\\Resources",
-      "path": "tenants",
+      "namespace": "Hostville\\Modullo\\Resources\\Tenants",
+      "path": "lms/tenants",
       "headers": ["Authorization"]
     },
-    "User": {
-      "client": "User",
-      "namespace": "Hostville\\Modullo\\Resources\\Users",
-      "path": "users",
-      "includes": ["company"],
+    "Program": {
+      "client": "Program",
+      "namespace": "Hostville\\Modullo\\Resources\\Programs",
+      "path": "lms/programs",
+      "headers": ["Authorization"]
+    },
+    "Courses": {
+      "client": "Courses",
+      "namespace": "Hostville\\Modullo\\Resources\\Programs\\Courses",
+      "path": "courses",
       "headers": ["Authorization"]
     }
   },
@@ -48,12 +52,18 @@
     "Profile": {
       "client": "Profile",
       "namespace": "Hostville\\Modullo\\Services\\Identity",
-      "path": "auth/me",
+      "path": "lms/auth/me",
       "parameters": {
         "required": [],
         "optional": []
       }
     },
+    "Program": {
+      "client": "Program",
+      "namespace": "Hostville\\Modullo\\Services\\Programs",
+      "path": "lms/programs"
+    },
+
     "Registration": {
       "client": "Registration",
       "namespace": "Hostville\\Modullo\\Services\\Identity",

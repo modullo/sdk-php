@@ -13,20 +13,20 @@ use Illuminate\Support\Arr;
 abstract class AbstractResource implements ResourceInterface
 {
     use SendsHttpRequestTrait {
-        send as httpSend;
+        SendsHttpRequestTrait::send as httpSend;
     }
 
     /** @var null|string  */
-    protected $id = null;
+    protected ?string $id = null;
 
     /** @var array  */
-    protected $relationships;
+    protected array $relationships;
 
     /** @var Sdk  */
-    protected $sdk;
+    protected Sdk $sdk;
 
     /** @var array */
-    protected $query;
+    protected array $query;
 
     /**
      * AbstractResource constructor.
