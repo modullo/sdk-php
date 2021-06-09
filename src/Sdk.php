@@ -16,7 +16,8 @@ use GuzzleHttp\Client;
  *
  * @method \Hostville\modullo\Resources\Tenant                       createTenantResource(string $id = null)
  * @method \Hostville\modullo\Services\Programs\Program              createProgramService()
-* @method  \Hostville\modullo\Resources\Programs\Courses              createCoursesResource(string $id = null)
+ * @method \Hostville\modullo\Services\Courses\Course                createCourseService()
+* @method  \Hostville\modullo\Resources\Programs\Courses             createCoursesResource(string $id = null)
  * @method \Hostville\modullo\Resources\Users\User                   createUserResource(string $id = null)
  * @method \Hostville\modullo\Services\Identity\Authorization        createAuthorizationService()
  * @method \Hostville\modullo\Services\Identity\PasswordLogin        createPasswordLoginService()

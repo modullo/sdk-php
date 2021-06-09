@@ -56,6 +56,16 @@
       }
     },
 
+    "Course": {
+      "client": "Course",
+      "namespace": "Hostville\\Modullo\\Services\\Courses",
+      "path": "lms/coursesC",
+      "parameters": {
+        "required": [],
+        "optional": []
+      }
+    },
+
     "Registration": {
       "client": "Registration",
       "namespace": "Hostville\\Modullo\\Services\\Identity",
