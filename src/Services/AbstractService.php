@@ -3,7 +3,9 @@
 namespace Hostville\Modullo\Services;
 
 
+use GuzzleHttp\Exception\GuzzleException;
 use Hostville\Modullo\Exception\ModulloException;
+use Hostville\Modullo\ModulloResponse;
 use Hostville\Modullo\RequestInterface;
 use Hostville\Modullo\Sdk;
 use Hostville\Modullo\SendsHttpRequestTrait;
@@ -12,14 +14,14 @@ use GuzzleHttp\Psr7\Uri;
 abstract class AbstractService implements ServiceInterface
 {
     use SendsHttpRequestTrait {
-        send as httpSend;
+        SendsHttpRequestTrait::send as httpSend;
     }
 
     /** @var Sdk  */
-    protected $sdk;
+    protected Sdk $sdk;
 
     /** @var array */
-    protected $query;
+    protected array $query;
 
     /**
      * AbstractService constructor.
@@ -59,9 +61,8 @@ abstract class AbstractService implements ServiceInterface
             # requesting data off a service item
             $path .= '/' . $this->id;
         }
-        $base = $this->sdk->getUrlRegistry()->getUrl($path, ['path' => $extras, 'query' => $this->getQuery()]);
         # compose the full request URL
-        return $base;
+        return $this->sdk->getUrlRegistry()->getUrl($path, ['path' => $extras, 'query' => $this->getQuery()]);
     }
 
     /**
@@ -137,10 +138,10 @@ abstract class AbstractService implements ServiceInterface
      * @param string $method
      * @param array  $path
      *
-     * @return \Hostville\Modullo\ModulloResponse
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @return ModulloResponse
+     * @throws GuzzleException
      */
-    public function send(string $method, array $path = [])
+    public function send(string $method, array $path = []): ModulloResponse
     {
         return $this->httpSend($method, $this->sdk->getHttpClient(), $path);
     }
