@@ -59,7 +59,17 @@
     "Course": {
       "client": "Course",
       "namespace": "Hostville\\Modullo\\Services\\Courses",
-      "path": "lms/coursesC",
+      "path": "lms/courses",
+      "parameters": {
+        "required": [],
+        "optional": []
+      }
+    },
+
+    "Asset": {
+      "client": "Asset",
+      "namespace": "Hostville\\Modullo\\Services\\Assets",
+      "path": "lms/assets",
       "parameters": {
         "required": [],
         "optional": []
