@@ -76,6 +76,26 @@
       }
     },
 
+    "Module": {
+      "client": "Module",
+      "namespace": "Hostville\\Modullo\\Services\\Modules",
+      "path": "lms/modules",
+      "parameters": {
+        "required": [],
+        "optional": []
+      }
+    },
+
+    "Quiz": {
+      "client": "Quiz",
+      "namespace": "Hostville\\Modullo\\Services\\Quizzes",
+      "path": "lms/quiz",
+      "parameters": {
+        "required": [],
+        "optional": []
+      }
+    },
+
     "Registration": {
       "client": "Registration",
       "namespace": "Hostville\\Modullo\\Services\\Identity",
