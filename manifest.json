@@ -88,8 +88,18 @@
 
     "Quiz": {
       "client": "Quiz",
-      "namespace": "Hostville\\Modullo\\Services\\Quizzes",
+      "namespace": "Hostville\\Modullo\\Services\\QuizService",
       "path": "lms/quiz",
+      "parameters": {
+        "required": [],
+        "optional": []
+      }
+    },
+
+    "Lesson": {
+      "client": "Lesson",
+      "namespace": "Hostville\\Modullo\\Services\\Lessons",
+      "path": "lms/lessons",
       "parameters": {
         "required": [],
         "optional": []
