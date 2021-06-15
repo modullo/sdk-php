@@ -1,6 +1,6 @@
 <?php
 
-namespace Hostville\Modullo\Services\QuizService;
+namespace Hostville\Modullo\Services\Quizzes;
 
 
 use Hostville\Modullo\Services\AbstractService;

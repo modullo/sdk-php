@@ -88,7 +88,7 @@
 
     "Quiz": {
       "client": "Quiz",
-      "namespace": "Hostville\\Modullo\\Services\\QuizService",
+      "namespace": "Hostville\\Modullo\\Services\\Quizzes",
       "path": "lms/quiz",
       "parameters": {
         "required": [],
