@@ -14,19 +14,21 @@ use GuzzleHttp\Client;
  * It provides some methods that allow you to easily create, and use resources and services.
  *
  *
- * @method \Hostville\modullo\Resources\Tenant                       createTenantResource(string $id = null)
- * @method \Hostville\modullo\Services\Programs\Program              createProgramService()
- * @method \Hostville\modullo\Services\Courses\Course                createCourseService()
- * @method \Hostville\modullo\Services\Assets\Asset                  createAssetService()
- * @method \Hostville\modullo\Services\Modules\Module                createModuleService()
- * @method \Hostville\modullo\Services\Quizzes\Quiz                  createQuizService()
- * @method \Hostville\modullo\Services\Lessons\Lesson                createLessonService()
- * @method \Hostville\modullo\Resources\Programs\Courses             createCoursesResource(string $id = null)
- * @method \Hostville\modullo\Resources\Users\User                   createUserResource(string $id = null)
- * @method \Hostville\modullo\Services\Identity\Authorization        createAuthorizationService()
- * @method \Hostville\modullo\Services\Identity\PasswordLogin        createPasswordLoginService()
- * @method \Hostville\modullo\Services\Identity\Profile              createProfileService()
- * @method \Hostville\modullo\Services\Identity\Registration         createRegistrationService()
+ * @method \Hostville\modullo\Resources\Tenant                                  createTenantResource(string $id = null)
+ * @method \Hostville\modullo\Services\Programs\Program                         createProgramService()
+ * @method \Hostville\modullo\Services\Courses\Course                           createCourseService()
+ * @method \Hostville\modullo\Services\Assets\Asset                             createAssetService()
+ * @method \Hostville\modullo\Services\Modules\Module                           createModuleService()
+ * @method \Hostville\modullo\Services\Quizzes\Quiz                             createQuizService()
+ * @method \Hostville\modullo\Services\Lessons\Lesson                           createLessonService()
+ * @method \Hostville\modullo\Services\Learner\Courses\LearnerCourse            createLearnerCourseService()
+ * @method \Hostville\modullo\Services\Learner\Programs\LearnerProgram          createLearnerProgramService()
+ * @method \Hostville\modullo\Resources\Programs\Courses                        createCoursesResource(string $id = null)
+ * @method \Hostville\modullo\Resources\Users\User                              createUserResource(string $id = null)
+ * @method \Hostville\modullo\Services\Identity\Authorization                   createAuthorizationService()
+ * @method \Hostville\modullo\Services\Identity\PasswordLogin                   createPasswordLoginService()
+ * @method \Hostville\modullo\Services\Identity\Profile                         createProfileService()
+ * @method \Hostville\modullo\Services\Identity\Registration                    createRegistrationService()
  *
  */
 class Sdk
