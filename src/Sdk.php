@@ -23,6 +23,8 @@ use GuzzleHttp\Client;
  * @method \Hostville\modullo\Services\Lessons\Lesson                           createLessonService()
  * @method \Hostville\modullo\Services\Learner\Courses\LearnerCourse            createLearnerCourseService()
  * @method \Hostville\modullo\Services\Learner\Programs\LearnerProgram          createLearnerProgramService()
+ * @method \Hostville\modullo\Services\Learner\Lessons\LearnerLesson            createLearnerLessonService()
+ * @method \Hostville\modullo\Services\Learner\Notes\LearnerNote                createLearnerNoteService()
  * @method \Hostville\modullo\Resources\Programs\Courses                        createCoursesResource(string $id = null)
  * @method \Hostville\modullo\Resources\Users\User                              createUserResource(string $id = null)
  * @method \Hostville\modullo\Services\Identity\Authorization                   createAuthorizationService()

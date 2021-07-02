@@ -86,6 +86,26 @@
       }
     },
 
+    "LearnerLesson": {
+      "client": "LearnerLesson",
+      "namespace": "Hostville\\Modullo\\Services\\Learner\\Lessons",
+      "path": "lms/learner/lessons",
+      "parameters": {
+        "required": [],
+        "optional": []
+      }
+    },
+
+    "LearnerNote": {
+      "client": "LearnerNote",
+      "namespace": "Hostville\\Modullo\\Services\\Learner\\Notes",
+      "path": "lms/learner/notes",
+      "parameters": {
+        "required": [],
+        "optional": []
+      }
+    },
+
     "Asset": {
       "client": "Asset",
       "namespace": "Hostville\\Modullo\\Services\\Assets",
