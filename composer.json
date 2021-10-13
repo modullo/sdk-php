@@ -7,7 +7,12 @@
   "license": "GPL-3.0-or-later",
   "authors": [
     {
-      "name": "Aina Ayotomide"
+      "name": "Ifeoluwa Olawoye",
+      "email": "bolaji.olawoye@hostvillenigeria.org"
+    },
+    {
+      "name": "Ayotomide Aina",
+      "homepage": "https://github.com/tomideo1"
     }
   ],
   "require": {

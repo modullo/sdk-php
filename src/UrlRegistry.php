@@ -25,7 +25,7 @@ class UrlRegistry
      */
     public function __construct(string $env = 'staging')
     {
-        $enviroments = include("config/enviroment.php");
+        $enviroments = include("config/environments.php");
         $envs = array_keys($enviroments);
         # get the available environment
         $this->environment = !in_array(strtolower($env), $envs, true) ? 'staging' : strtolower($env);
