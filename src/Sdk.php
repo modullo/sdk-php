@@ -3,7 +3,7 @@
 namespace Hostville\Modullo;
 
 
-use Hostville\Modullo\Exception\modulloException;
+use Hostville\Modullo\Exception\ModulloException;
 use Hostville\Modullo\Exception\ResourceNotFoundException;
 use Hostville\Modullo\Resources\ResourceInterface;
 use Hostville\Modullo\Services\ServiceInterface;
