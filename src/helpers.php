@@ -55,15 +55,18 @@ function modullo_sdk_app_path(string $path = null): string
  */
 function http_client(\GuzzleHttp\Psr7\Uri $uri = null): \GuzzleHttp\Client
 {
+    $verify = null !== env('DORCAS_CURL_SSL_VERIFY') ? env('DORCAS_CURL_SSL_VERIFY') : true;
+
     $options = [
         \GuzzleHttp\RequestOptions::ALLOW_REDIRECTS => true,
         \GuzzleHttp\RequestOptions::CONNECT_TIMEOUT => 30.0,
         \GuzzleHttp\RequestOptions::TIMEOUT => 30.0,
         \GuzzleHttp\RequestOptions::HEADERS => [
             'User-Agent' => 'modullo-sdk-php/'.Hostville\Modullo\Sdk::VERSION
-        ]
+        ],
+        \GuzzleHttp\RequestOptions::VERIFY => $verify
     ];
-    if (!empty($baseUrl)) {
+    if (!empty($uri)) { //$baseUrl before
         $options['base_uri'] = $uri->getScheme() . '://' . $uri->getAuthority();
         $options['base_uri'] .= !empty($uri->getPath()) ? '/'.$uri->getPath() : '';
 
