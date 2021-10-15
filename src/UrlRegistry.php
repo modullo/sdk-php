@@ -116,6 +116,11 @@ class UrlRegistry
 
       public function getVersion(): string
       {
-        return 'v1';
+        $deploy = null !== env('MODULLO_DEPLOY_MODE') ? env('MODULLO_DEPLOY_MODE') : 'default';
+        if ($deploy == "lambda") {
+            return 'staging/v1';
+        } else {
+            return 'v1';
+        }
       }
 } 
