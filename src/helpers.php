@@ -65,7 +65,9 @@ function http_client(\GuzzleHttp\Psr7\Uri $uri = null): \GuzzleHttp\Client
 
     if ($deploy == "lambda") {
         $gateway_id = null !== env('MODULLO_APIGATEWAY_ID') ? env('MODULLO_APIGATEWAY_ID') : '01234567ab';
+        $host = null !== env('MODULLO_APIGATEWAY_HOST') ? env('MODULLO_APIGATEWAY_HOST') : 'modullo.io';
         $headers['x-apigw-api-id'] = $gateway_id;
+        $headers['Host'] = $host;
         //'Host: 01234567ab.execute-api.us-west-2.amazonaws.com'
     }
     
