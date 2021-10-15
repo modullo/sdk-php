@@ -55,17 +55,29 @@ function modullo_sdk_app_path(string $path = null): string
  */
 function http_client(\GuzzleHttp\Psr7\Uri $uri = null): \GuzzleHttp\Client
 {
+    $headers = [
+        'User-Agent' => 'modullo-sdk-php/'.Hostville\Modullo\Sdk::VERSION
+    ];
+
     $verify = null !== env('MODULLO_CURL_SSL_VERIFY') ? env('MODULLO_CURL_SSL_VERIFY') : true;
+
+    $deploy = null !== env('MODULLO_DEPLOY_MODE') ? env('MODULLO_DEPLOY_MODE') : 'default';
+
+    if ($deploy == "lambda") {
+        $gateway_id = null !== env('MODULLO_APIGATEWAY_ID') ? env('MODULLO_APIGATEWAY_ID') : '01234567ab';
+        $headers['x-apigw-api-id'] = $gateway_id;
+        //'Host: 01234567ab.execute-api.us-west-2.amazonaws.com'
+    }
+    
 
     $options = [
         \GuzzleHttp\RequestOptions::ALLOW_REDIRECTS => true,
         \GuzzleHttp\RequestOptions::CONNECT_TIMEOUT => 30.0,
         \GuzzleHttp\RequestOptions::TIMEOUT => 30.0,
-        \GuzzleHttp\RequestOptions::HEADERS => [
-            'User-Agent' => 'modullo-sdk-php/'.Hostville\Modullo\Sdk::VERSION
-        ],
+        \GuzzleHttp\RequestOptions::HEADERS => $headers,
         \GuzzleHttp\RequestOptions::VERIFY => $verify
     ];
+
     if (!empty($uri)) { //$baseUrl before
         $options['base_uri'] = $uri->getScheme() . '://' . $uri->getAuthority();
         $options['base_uri'] .= !empty($uri->getPath()) ? '/'.$uri->getPath() : '';
