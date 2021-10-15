@@ -118,7 +118,7 @@ class UrlRegistry
       {
         $deploy = null !== env('MODULLO_DEPLOY_MODE') ? env('MODULLO_DEPLOY_MODE') : 'default';
         if ($deploy == "lambda") {
-            return 'staging/v1';
+            return 'v1'; //'staging/v1'
         } else {
             return 'v1';
         }
