@@ -117,8 +117,9 @@ class UrlRegistry
       public function getVersion(): string
       {
         $deploy = null !== env('MODULLO_DEPLOY_MODE') ? env('MODULLO_DEPLOY_MODE') : 'default';
+        $stage = null !== env('MODULLO_APIGATEWAY_STAGE') ? env('MODULLO_APIGATEWAY_STAGE') : 'staging';
         if ($deploy == "lambda") {
-            return 'staging/v1'; //'staging/v1'
+            return $stage . '/v1';
         } else {
             return 'v1';
         }
