@@ -173,15 +173,15 @@ class Sdk
     private function checkCredentials(array $args = []): bool
     {
         if (empty($args['credentials'])) {
-            throw new modulloException('You did not provide the modullo client credentials in the configuration.', $args);
+            throw new ModulloException('You did not provide the modullo client credentials in the configuration.', $args);
         }
         $id = data_get($args, 'credentials.id', null);
         $secret = data_get($args, 'credentials.secret', null);
         if (empty($id)) {
-            throw new modulloException('The client "id" key is absent in the credentials configuration.', $args);
+            throw new ModulloException('The client "id" key is absent in the credentials configuration.', $args);
         }
         if (empty($secret)) {
-            throw new modulloException('The client "secret" key is absent in the credentials configuration.', $args);
+            throw new ModulloException('The client "secret" key is absent in the credentials configuration.', $args);
         }
         return true;
     }
