@@ -46,6 +46,15 @@
         "optional": []
       }
     },
+    "ProfileLMS": {
+      "client": "Profile",
+      "namespace": "Hostville\\Modullo\\Services\\Identity",
+      "path": "lms/auth/me",
+      "parameters": {
+        "required": [],
+        "optional": []
+      }
+    },
     "Program": {
       "client": "Program",
       "namespace": "Hostville\\Modullo\\Services\\Programs",
