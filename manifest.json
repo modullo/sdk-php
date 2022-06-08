@@ -40,7 +40,7 @@
     "Profile": {
       "client": "Profile",
       "namespace": "Hostville\\Modullo\\Services\\Identity",
-      "path": "lms/auth/me",
+      "path": "auth/me",
       "parameters": {
         "required": [],
         "optional": []
