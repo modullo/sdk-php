@@ -30,6 +30,7 @@ use GuzzleHttp\Client;
  * @method \Hostville\modullo\Services\Identity\Authorization                   createAuthorizationService()
  * @method \Hostville\modullo\Services\Identity\PasswordLogin                   createPasswordLoginService()
  * @method \Hostville\modullo\Services\Identity\Profile                         createProfileService()
+ * @method \Hostville\modullo\Services\Identity\Profile                         createProfileLMSService()
  * @method \Hostville\modullo\Services\Identity\Registration                    createRegistrationService()
  *
  */
