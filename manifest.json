@@ -55,6 +55,15 @@
         "optional": []
       }
     },
+    "Learners": {
+      "client": "Learners",
+      "namespace": "Hostville\\Modullo\\Services\\Identity",
+      "path": "lms/learners",
+      "parameters": {
+        "required": [],
+        "optional": []
+      }
+    },
     "Program": {
       "client": "Program",
       "namespace": "Hostville\\Modullo\\Services\\Programs",
