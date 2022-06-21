@@ -30,6 +30,7 @@ class UrlRegistry
         # get the available environment
         $this->environment = !in_array(strtolower($env), $envs, true) ? 'staging' : strtolower($env);
         $base = $enviroments[$this->environment];
+        dd($base);
         $this->uri = new Uri($base);
     }
 
