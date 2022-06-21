@@ -27,7 +27,7 @@ class UrlRegistry
     {
         $enviroments = include("config/environments.php");
         $envs = array_keys($enviroments);
-        dd($env);
+        dd($envs);
         # get the available environment
         $this->environment = !in_array(strtolower($env), $envs, true) ? 'staging' : strtolower($env);
         $base = $enviroments[$this->environment];
