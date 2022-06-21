@@ -80,6 +80,7 @@ class Sdk
         if (empty($args['credentials']['environment'])) {
             $args['environment'] = 'staging';
         }
+        dd($args);
         $this->checkCredentials($args);
         $this->args = $args;
         $this->urlRegistry = new UrlRegistry($args['credentials']['environment']);
