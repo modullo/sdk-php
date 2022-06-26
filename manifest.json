@@ -164,6 +164,26 @@
       }
     },
 
+    "LearnersPrograms": {
+      "client": "LearnersPrograms",
+      "namespace": "Hostville\\Modullo\\Services\\LearnersPrograms",
+      "path": "lms/learner-programs",
+      "parameters": {
+        "required": [],
+        "optional": []
+      }
+    },
+
+    "LearnersCourses": {
+      "client": "LearnersCourses",
+      "namespace": "Hostville\\Modullo\\Services\\LearnersCourses",
+      "path": "lms/learner-courses",
+      "parameters": {
+        "required": [],
+        "optional": []
+      }
+    },
+
     "Registration": {
       "client": "Registration",
       "namespace": "Hostville\\Modullo\\Services\\Identity",
