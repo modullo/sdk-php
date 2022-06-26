@@ -33,6 +33,8 @@ use GuzzleHttp\Client;
  * @method \Hostville\modullo\Services\Identity\Profile                         createProfileLMSService()
  * @method \Hostville\modullo\Services\Identity\Registration                    createRegistrationService()
  * @method \Hostville\modullo\Services\Identity\Learners                        createLearnersService()
+ * @method \Hostville\modullo\Services\LearnersPrograms                         createLearnersProgramsService() //this is different
+ * @method \Hostville\modullo\Services\LearnersCourses                          createLearnersCoursesService() //this is different
  *
  */
 class Sdk
