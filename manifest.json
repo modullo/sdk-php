@@ -55,6 +55,15 @@
         "optional": []
       }
     },
+    "Tenants": {
+      "client": "Tenants",
+      "namespace": "Hostville\\Modullo\\Services\\Identity",
+      "path": "lms/tenants",
+      "parameters": {
+        "required": [],
+        "optional": []
+      }
+    },
     "Learners": {
       "client": "Learners",
       "namespace": "Hostville\\Modullo\\Services\\Identity",
