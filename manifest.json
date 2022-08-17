@@ -201,6 +201,16 @@
       "required": ["client_id", "client_secret", "email", "password", "first_name", "last_name", "phone_number"],
         "optional": []
       }
+    },
+
+    "Home": {
+      "client": "Home",
+      "namespace": "Hostville\\Modullo\\Services\\Home",
+      "path": "lms/home",
+      "parameters": {
+        "required": [],
+        "optional": []
+      }
     }
   }
 }
