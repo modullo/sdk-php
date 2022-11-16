@@ -133,7 +133,7 @@ function authorize_via_email_only(Hostville\Modullo\Sdk $sdk, array $credentials
     foreach ($credentials as $key => $value) {
         $service = $service->addBodyParam($key, $value);
     }
-    $response = $service->send('post', ['email']);
+    $response = $service->send('post');
     # sends a HTTP POST request with the parameters
     return $response->isSuccessful() && $returnToken ? $response->getData()['access_token'] : $response;
 }
